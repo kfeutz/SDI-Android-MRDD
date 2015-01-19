@@ -3,11 +3,44 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
+              android:background="@color/sdi_grey"
+              android:id="@+id/login" android:weightSum="1">
+    <!--  Header Starts-->
+    <LinearLayout android:id="@+id/header"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/sdi_white"
+                  android:paddingTop="5dip"
+                  android:paddingBottom="5dip">
+        <!-- Logo Start-->
+        <ImageView android:src="@drawable/sdi_header"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dip"/>
+        <!-- Logo Ends -->
+    </LinearLayout>
+    <!--  Header Ends -->
     <TextView
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:text="SDI MRDD Login/Authentication"
+            android:id="@+id/login_title"/>
+    <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_sign_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
-            />
+            android:layout_marginBottom="20dp" android:layout_weight="0.18"/>
+    <Button
+            android:id="@+id/btn_sign_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_logout_from_google"
+            android:layout_marginBottom="10dp"/>
+    <Button
+            android:id="@+id/btn_revoke_access"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_revoke_access"/>
+
 </LinearLayout>
 
