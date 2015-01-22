@@ -96,7 +96,8 @@ public class MyActivity extends Activity implements
         // access Google APIs on behalf of the user.
         mSignInClicked = false;
         Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
-
+        Intent intent = new Intent(this, WellListActivity.class);
+        startActivity(intent);
     }
 
     protected void onActivityResult(int requestCode, int responseCode, Intent intent) {
