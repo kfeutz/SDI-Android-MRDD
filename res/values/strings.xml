@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SDI MRDD</string>
+    <string name="well_page_name">Well Lists</string>
     <string name="btn_logout_from_google">Logout</string>
     <string name="btn_revoke_access">Revoke</string>
 </resources>
