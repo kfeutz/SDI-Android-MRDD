@@ -58,6 +58,7 @@ public class MyActivity extends Activity implements
         findViewById(R.id.btn_sign_in).setOnClickListener(this);
         findViewById(R.id.btn_sign_out).setOnClickListener(this);
         findViewById(R.id.btn_revoke_access).setOnClickListener(this);
+        /*findViewById(R.id.log_out_button).setOnClickListener(this);*/
     }
     protected void onStart() {
         super.onStart();
@@ -95,7 +96,6 @@ public class MyActivity extends Activity implements
         // We've resolved any connection errors.  mGoogleApiClient can be used to
         // access Google APIs on behalf of the user.
         mSignInClicked = false;
-        Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, WellListActivity.class);
         startActivity(intent);
     }
@@ -124,7 +124,7 @@ public class MyActivity extends Activity implements
             try {
                 mIntentInProgress = true;
                 mConnectionResult.startResolutionForResult(this, RC_SIGN_IN);
-                Toast.makeText(this, "After", Toast.LENGTH_LONG).show();
+
             } catch (IntentSender.SendIntentException e) {
                 mIntentInProgress = false;
                 mGoogleApiClient.connect();
@@ -148,6 +148,10 @@ public class MyActivity extends Activity implements
                 // Revoke access button clicked
                 revokeGplusAccess();
                 break;
+           /* case R.id.log_out_button:
+                // Revoke access button clicked
+                revokeGplusAccess();
+                break;*/
 
         }
     }
@@ -165,17 +169,17 @@ public class MyActivity extends Activity implements
      * */
     private void signOutFromGplus() {
         if (mGoogleApiClient.isConnected()) {
-            mSignInClicked=false;
-            Toast.makeText(this, "User is attempting to log outx!", Toast.LENGTH_LONG).show();
+            mSignInClicked = false;
+            Toast.makeText(this, "User is attempting to log out!", Toast.LENGTH_LONG).show();
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
             mGoogleApiClient.disconnect();
-            /*mGoogleApiClient.connect();*/
+            mGoogleApiClient.connect();
         }
     }
     /**
      * Revoking access from google
      * */
-    private void revokeGplusAccess() {
+    public void revokeGplusAccess() {
         if (mGoogleApiClient.isConnected()) {
             Toast.makeText(this, "Revoking Access", Toast.LENGTH_LONG).show();
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -190,4 +194,5 @@ public class MyActivity extends Activity implements
                     });
         }
     }
+
 }

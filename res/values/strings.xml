@@ -2,6 +2,10 @@
 <resources>
     <string name="app_name">SDI MRDD</string>
     <string name="well_page_name">Well Lists</string>
+    <string name="add_curve_page_name">Add Curve</string>
     <string name="btn_logout_from_google">Logout</string>
     <string name="btn_revoke_access">Revoke</string>
+    <string name="search_hint">Search Wells</string>
+    <string name="add_well_action_search">Search Add Wells Page</string>
+    <string name="action_settings">Settings</string>
 </resources>
