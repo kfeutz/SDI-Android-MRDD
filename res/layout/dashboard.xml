@@ -9,49 +9,26 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:background="@color/wallet_holo_blue_light">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        <ImageButton
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:background="@color/wallet_holo_blue_light">
+            android:id="@+id/imageButton"
+            android:src="@drawable/cog"
+            android:background="@color/wallet_holo_blue_light" />
 
-            <ImageButton
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton"
-                android:src="@drawable/cog"
-                android:background="@color/wallet_holo_blue_light" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Dashboard - Well 1"
-                android:id="@+id/textView"
-                android:textColor="@color/common_signin_btn_light_text_default"
-                android:background="@color/wallet_holo_blue_light"
-                android:editable="true"
-                android:layout_gravity="center"
-                android:textAlignment="gravity" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_weight="1.17">
-
-        <ImageView
-            android:layout_width="428dp"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/samplegraph1" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Dashboard - Well 1"
+            android:id="@+id/textView"
+            android:textColor="@color/common_signin_btn_light_text_default"
+            android:background="@color/wallet_holo_blue_light"
+            android:editable="true"
+            android:layout_gravity="center"
+            android:textAlignment="gravity" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,12 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/imageView2"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/sampletemp1" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
+
 
 </LinearLayout>
